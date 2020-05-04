@@ -1,4 +1,5 @@
 const {Router} = require('express')
+const User = require('../Models/User')
 const router = Router()
 
 // /api/auth/register
