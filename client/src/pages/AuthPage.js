@@ -1,6 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 export const AuthPage = () => {
+    const [form, setForm] = useState({
+        email: '', password: ''
+    })
+    const changeHandler = event => {
+        setForm({...form, [event.target.name]: event.target.value})
+    }
+
     return (
         <div className="row">
             <div className="col s6 offset-3">
@@ -10,12 +17,20 @@ export const AuthPage = () => {
                         <span className="card-title">Log in</span>
                         <div>
                             <div className="input-field">
-                                <input placeholder="Your e-mail" id="email" type="text"
-                                       className="yellow-input validate"/>
+                                <input placeholder="Your e-mail"
+                                       id="email"
+                                       type="text"
+                                       className="yellow-input validate"
+                                       onChange={changeHandler}
+                                />
                             </div>
                             <div className="input-field">
-                                <input placeholder="Password" id="password" type="password"
-                                       className="yellow-input validate"/>
+                                <input placeholder="Password"
+                                       id="password"
+                                       type="password"
+                                       className="yellow-input validate"
+                                       onChange={changeHandler}
+                                />
                             </div>
                         </div>
                     </div>
