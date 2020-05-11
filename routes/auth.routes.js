@@ -61,8 +61,8 @@ router.post('/login', [
 
             // Check user exists and password
             const {email, password} = req.body
-            const candidate = await User.findOne({email})
-            if (candidate) {
+            const user = await User.findOne({email})
+            if (!user) {
                 return res.status(400).json({message: 'Login failed'})
             }
             const isMatch = await bcrypt.compare(password, user.password);
