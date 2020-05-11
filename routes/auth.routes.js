@@ -6,15 +6,16 @@ const config = require('config')
 const User = require('../Models/User')
 const router = Router()
 
+const minPassLength = 4
+
 // /api/auth/register
 router.post('/register',
     [
         check('email', 'E-mail is not valid').isEmail(),
-        check('password', 'Password is too weak (less then 6 symbols)').isLength({min: 6}),
+        check('password', `Password is too weak (less then ${minPassLength} symbols)`).isLength({min: minPassLength}),
     ],
     async (req, res) => {
         try {
-            console.log('Body:', req.body)
             // Validation
             const errors = validationResult(req)
             if (!errors.isEmpty()) {
@@ -32,7 +33,7 @@ router.post('/register',
             }
 
             // Create new User
-            const passwordHash = await bcrypt.hash(password, 89346)
+            const passwordHash = await bcrypt.hash(password, 12)
             const user = new User({email: email, password: passwordHash})
             await user.save()
             res.status(201).json({message: 'User created successfully'})
