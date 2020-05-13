@@ -12,15 +12,10 @@ export const Navbar = () => {
         history.push('/')
     }
     return (
-        <nav>
-            <div className="nav-wrapper blue darket-1" style={{padding: '0 2rem'}}>
-                <span className="brand-logo">Url shortener</span>
-                <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li><NavLink to="/create">Create</NavLink></li>
-                    <li><NavLink to="/links">My Links</NavLink></li>
-                    <li><a href="/logout" onClick={logoutHandler}>Logout</a></li>
-                </ul>
-            </div>
-        </nav>
+        <ul id="nav-mobile" className="right hide-on-small-only">
+            <li><NavLink to="/create">Create</NavLink></li>
+            <li><NavLink to="/links">My Links</NavLink></li>
+            <li><a href="/logout" onClick={logoutHandler}>Logout</a></li>
+        </ul>
     )
 }
