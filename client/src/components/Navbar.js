@@ -12,7 +12,7 @@ export const Navbar = () => {
         history.push('/')
     }
     return (
-        <ul id="nav-mobile" className="right hide-on-small-only">
+        <ul id="nav-mobile" className="right">
             <li><NavLink to="/create">Create</NavLink></li>
             <li><NavLink to="/links">My Links</NavLink></li>
             <li><a href="/logout" onClick={logoutHandler}>Logout</a></li>

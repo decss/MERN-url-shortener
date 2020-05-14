@@ -19,10 +19,10 @@ function App() {
             <Router>
                 <nav>
                     <div className="nav-wrapper blue darket-1" style={{padding: '0 2rem'}}>
-                        <span style={{fontSize: '2rem'}}>Url shortener</span>
+                        <span style={{fontSize: '2rem'}} className="hide-on-small-only">Url shortener</span>
                         {isAuthenticated
                             ? <Navbar/>
-                            : <ul id="nav-mobile" className="right hide-on-small-only">
+                            : <ul id="nav-mobile" className="right">
                                 <li><NavLink to="/about">About</NavLink></li>
                                 <li><NavLink to="/login">Log In</NavLink></li>
                             </ul>
