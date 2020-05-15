@@ -3,7 +3,7 @@ import {useParams} from "react-router-dom";
 import {useHttp} from "../hooks/http.hook";
 import {AuthContext} from "../context/AuthContext";
 import {Loader} from "../components/Loader";
-import {linkCard} from "../components/linkCard";
+import {LinkCard} from "../components/LinkCard";
 
 
 export const DetailPage = () => {
@@ -32,7 +32,7 @@ export const DetailPage = () => {
 
     return (
         <>
-            { !loading && link && <linkCard link={link} />}
+            {!loading && link && <LinkCard link={link}/>}
         </>
     )
 }
