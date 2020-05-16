@@ -30,6 +30,7 @@ router.post('/generate', auth, async (req, res) => {
         res.status(201).json({link})
 
     } catch (e) {
+        //TODO: add error message
         res.status(500).json({message: 'ERROR'})
     }
 })
@@ -41,6 +42,7 @@ router.get('/', auth, async (req, res) => {
         res.json(links)
 
     } catch (e) {
+        //TODO: add error message
         res.status(500).json({message: 'ERROR'})
     }
 })
@@ -51,6 +53,7 @@ router.get('/:id', async (req, res) => {
         res.json(links)
 
     } catch (e) {
+        //TODO: add error message
         res.status(500).json({message: 'ERROR'})
     }
 })
