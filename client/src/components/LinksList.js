@@ -23,7 +23,7 @@ export const LinksList = ({links}) => {
                     <tbody>
                     { links.map((link, index) => {
                         return (
-                            <tr>
+                            <tr key={link._id}>
                                 <td>{index + 1}</td>
                                 <td>{link.to}</td>
                                 <td>{link.from}</td>
