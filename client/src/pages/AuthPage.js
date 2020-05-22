@@ -40,7 +40,7 @@ export const AuthPage = () => {
         <div className="row">
             <div className="col s12 m8 offset-m2 xl6 offset-xl3">
                 <h1>Short your URL</h1>
-                <div className="card blue darken-1">
+                <div className="card brown darken-1">
                     <div className="card-content white-text">
                         <span className="card-title">Log in</span>
                         <div>

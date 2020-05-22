@@ -2,5 +2,6 @@
   "port": 5000,
   "baseUrl": "http://localhost:5000",
   "mongoUri": "mongodb+srv://<user>:<password>@<dburl>/<dbname>?retryWrites=true&w=majority",
-  "jwtSecret": "secret-phrase"
+  "jwtSecret": "secret-phrase",
+  "theme": "brown darken-3"
 }

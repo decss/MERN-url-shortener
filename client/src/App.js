@@ -23,7 +23,7 @@ function App() {
         <AuthContext.Provider value={{token, login, logout, userId, isAuthenticated}}>
             <Router>
                 <nav>
-                    <div className="nav-wrapper blue darket-1" style={{padding: '0 2rem'}}>
+                    <div className="nav-wrapper brown darken-3" style={{padding: '0 2rem'}}>
                         <span style={{fontSize: '2rem'}} className="hide-on-small-only">Url shortener</span>
                         {isAuthenticated
                             ? <Navbar/>

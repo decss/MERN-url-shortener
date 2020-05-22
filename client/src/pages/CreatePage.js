@@ -38,7 +38,7 @@ export const CreatePage = () => {
                     />
                     <label htmlFor="link">Insert URL</label>
                 </div>
-                <button className="waves-effect waves-light btn-large blue darken-1" onClick={pressHandler}><i>Shorten</i></button>
+                <button className="waves-effect waves-light btn-large brown darken-1" onClick={pressHandler}><i>Shorten</i></button>
             </div>
         </div>
     )
