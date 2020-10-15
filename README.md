@@ -10,15 +10,18 @@ Use demo account in case you don't want to register<br>
 Email: `demo@gmail.com`<br>
 Password: `pass`<br>
 
-#### Some details
+### Some details
 - Frontend port: 5000<br>
 - Backend port: 3000 (for local api requests)<br>
 
-Install:
+### Installation
 
-    git clone https://git.. // clone repo
-    npm i                   // install api deps 
-    npm run client:install  // install client deps
-    npm run client:build    // build app front
-    npm run start           // run in production, "npm run dev" for dev
-   
+    git clone https://git...    // clone repo
+
+After cloning repo rename `config/default.json.example` to `config/default.json`<br>
+At least set `mongoUri` to connect to your DB in `default.json`. If you are running app remotely set `baseUrl` corresponding to your domain or IP  
+
+    npm i                       // install api deps 
+    npm run client:install      // install client deps
+    npm run client:build        // build app front
+    npm run start               // run in production, "npm run dev" for dev
